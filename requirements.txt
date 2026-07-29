@@ -1,0 +1,11 @@
+streamlit
+tensorflow==2.19.0
+keras
+numpy
+pandas
+pillow
+openpyxl
+tqdm
+torch
+transformers
+opencv-python
