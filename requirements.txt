@@ -9,3 +9,6 @@ torch
 torchvision
 sentencepiece
 protobuf==5.29.6
+streamlit-webrtc==0.76.2
+aiortc==1.15.0
+av==17.1.0

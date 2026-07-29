@@ -4,7 +4,8 @@ import time
 from PIL import Image
 from transformers import BlipProcessor, BlipForConditionalGeneration
 import torch
-
+import av
+from streamlit_webrtc import webrtc_streamer, VideoProcessorBase, WebRtcMode
 @st.cache_resource
 def load_blip():
     processor = BlipProcessor.from_pretrained(
@@ -134,7 +135,7 @@ def main():
         caption_placeholder = st.empty()
 
         if st.session_state.live_running:
-            cap = cv2.VideoCapture(1)
+            cap = cv2.VideoCapture()
             if not cap.isOpened():
                 st.error("Unable to access the webcam. Please check your camera settings.")
                 st.session_state.live_running = False
