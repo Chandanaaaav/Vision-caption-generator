@@ -75,7 +75,6 @@ header{
     visibility:hidden;
 }
 
-/* ===== DARK BACKGROUND ===== */
 body{
     background: #1a1d23;
     background-attachment: fixed;
@@ -86,7 +85,6 @@ body{
     color: #e2e2e2;
 }
 
-/* ===== MAIN CONTAINER ===== */
 .block-container{
     max-width:1200px;
     padding-top:1.5rem;
@@ -97,7 +95,6 @@ body{
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
-/* ===== TOP NAV BAR ===== */
 .top-nav{
     display: flex;
     align-items: center;
@@ -147,7 +144,6 @@ body{
     border: 1px solid rgba(255,255,255,0.06);
 }
 
-/* ===== HERO SECTION ===== */
 .hero{
     display:flex;
     flex-wrap: wrap;
@@ -205,7 +201,6 @@ body{
     line-height: 1.6;
 }
 
-/* ===== MODE SELECTOR BUTTONS ===== */
 .mode-btn{
     background: #2f353e;
     border: 1.5px solid #3f4651;
@@ -247,7 +242,6 @@ body{
     color: #ffffff;
 }
 
-/* ===== FEATURE CARDS ===== */
 .features{
     display:flex;
     flex-wrap: wrap;
@@ -307,7 +301,6 @@ hr{
     margin: 24px 0;
 }
 
-/* ===== MODE CONTENT CARDS ===== */
 .mode-content{
     background: #2f353e;
     border: 1px solid #3f4651;
@@ -330,7 +323,6 @@ hr{
     font-size: 0.9rem;
 }
 
-/* ===== STREAMLIT OVERRIDES ===== */
 .stButton>button{
     background: #c9975e !important;
     color:#1a1d23 !important;
@@ -362,7 +354,6 @@ hr{
     background: rgba(201,151,94,0.06) !important;
 }
 
-/* Success / Info / Error messages */
 .stAlert{
     border-radius: 12px !important;
     border: none !important;
@@ -400,7 +391,6 @@ hr{
     border-left: 4px solid #f6ad55 !important;
 }
 
-/* ===== FOOTER ===== */
 .footer{
     text-align: center;
     padding: 20px 20px 8px;
@@ -414,7 +404,6 @@ hr{
     color: #c9975e;
 }
 
-/* ===== VIDEO CAPTION ITEMS ===== */
 .caption-item{
     background: #23272e;
     border: 1px solid #3a4150;
@@ -438,12 +427,10 @@ hr{
     color: #b0b0b0;
 }
 
-/* ===== SPINNER ===== */
 .stSpinner > div{
     border-top-color: #c9975e !important;
 }
 
-/* ===== DARK STREAMLIT OVERRIDES ===== */
 .stTextInput label, .stSelectbox label, .stRadio label{
     color: #c0c0c0 !important;
 }
@@ -464,7 +451,18 @@ hr{
 </style>
 """, unsafe_allow_html=True)
 
-
+# ===== TOP NAVIGATION BAR =====
+st.markdown("""
+<div class="top-nav">
+    <div class="nav-left">
+        <span class="logo-icon">CC</span>
+        <span>Caption Generator</span>
+    </div>
+    <div class="nav-right">
+        <span class="badge">BLIP Model</span>
+        <span class="badge">CNN+LSTM</span>
+    </div>
+""", unsafe_allow_html=True)
 
 # ===== HERO SECTION =====
 st.markdown("""
@@ -503,7 +501,6 @@ st.markdown('<p style="font-size:1.15rem; font-weight:600; color:#d0d0d0; margin
 if "selected_mode" not in st.session_state:
     st.session_state.selected_mode = "Upload Image"
 
-# Mode selection buttons styled as cards
 col1, col2, col3 = st.columns(3)
 
 with col1:
@@ -662,3 +659,9 @@ else:
 
     st.markdown('</div>', unsafe_allow_html=True)
 
+# ===== FOOTER =====
+st.markdown("""
+<div class="footer">
+    Built with Streamlit &middot; BLIP &amp; CNN+LSTM models
+</div>
+""", unsafe_allow_html=True)

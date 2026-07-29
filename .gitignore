@@ -1,59 +1,9 @@
 .venv/
-venv/
 __pycache__/
 *.pyc
 *.pyo
-*.pyd
-*.sqlite3
-*.db
-*.log
-*.pot
-*.mo
-*.cache
-*.tmp
 .DS_Store
-Thumbs.db
-
-# Python environment
-.env
-.venv
-venv
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# Data and model files
 *.pkl
+*.xls
 *.keras
 *.h5
-*.hdf5
-*.ckpt
-*.onnx
-*.pt
-*.pth
-*.npz
-*.xls
-*.xlsx
-*.csv
-*.zip
-*.tar.gz
-*.tar
-*.gz
-
-# Streamlit cache or temp files
-.streamlit/
-
-# IDEs
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
-
-# OS files
-*.log
-*.tmp
-*.swp
-*.bak
-
-# Git metadata
-.git
