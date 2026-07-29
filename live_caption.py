@@ -134,7 +134,7 @@ def main():
         caption_placeholder = st.empty()
 
         if st.session_state.live_running:
-            cap = cv2.VideoCapture(0)
+            cap = cv2.VideoCapture(1)
             if not cap.isOpened():
                 st.error("Unable to access the webcam. Please check your camera settings.")
                 st.session_state.live_running = False
